@@ -7,10 +7,9 @@ on:
   push:
     # main = default top-level branch name, master = deprecated name
     # run CI on every branch push except top-level
-    branches:
-      - '*'
-      - '!master'
-      - '!main'
+    branches-ignore:
+      - master
+      - main
   pull_request:
     branches:
       - 'master'
