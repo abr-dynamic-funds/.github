@@ -1,6 +1,6 @@
 {
-    "name": "ABR Dynamic Funds - Organization - Python - Linux - CI - Workflow",
-    "description": "ABR Python Linux CI workflow template.",
+    "name": "ABR - Python - Linux - CI - Workflow",
+    "description": "install requirements, lint with: (flake8, mypy, and isort), test with pytest",
     "iconName": "abr-logo",
     "categories": [
         "Python"
