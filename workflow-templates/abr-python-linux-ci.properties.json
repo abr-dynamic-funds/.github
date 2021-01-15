@@ -1,0 +1,8 @@
+{
+    "name": "ABR Dynamic Funds - Organization - Python - Linux - CI - Workflow",
+    "description": "ABR Python Linux CI workflow template.",
+    "iconName": "abr-logo",
+    "categories": [
+        "Python"
+    ]
+}
