@@ -13,8 +13,8 @@ on:
       - main
   pull_request:
     branches:
-      - 'master'
-      - 'main'
+      - master
+      - main
   # allow running workflow manually
   workflow_dispatch:
 
@@ -33,9 +33,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install setuptools wheel
-        pip install flake8 mypy pytest isort
-        pip install -r requirements.txt
+        python -m pip install setuptools wheel
+        python -m pip install flake8 mypy pytest isort
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         # pip install git+https://adamiani:${{ secrets.GH_ACCESS_TOKEN }}@github.com/adamiani-abr/email_helpers.git
         # pip install git+https://adamiani:${{ secrets.GH_ACCESS_TOKEN }}@github.com/adamiani-abr/ftp_workflows.git
     - name: Lint with flake8
@@ -64,4 +64,4 @@ jobs:
         fi
     - name: Test with pytest
       run: |
-        python -m pytest
+        if [ -f tests/ ]; then python -m pytest; fi
